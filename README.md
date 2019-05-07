@@ -6,4 +6,4 @@
 ## Wiring Diagram
 ![Alt text](https://github.com/KhairulIzwan/arduino_hc06/blob/master/img/HC06_LED_Blink.png)
 
-<video src="https://github.com/KhairulIzwan/arduino_hc06/blob/master/video/Untitled.mov" width="320" height="200" controls preload></video>
+<video src="https://github.com/KhairulIzwan/arduino_hc06/blob/master/video/Untitled.mp4" width="320" height="200" controls preload></video>
