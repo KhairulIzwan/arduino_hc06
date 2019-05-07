@@ -7,7 +7,7 @@
 SoftwareSerial mySerial(3, 4); // RX, TX
 
 // #define constantName value
-#define LED 13;
+#define LED 13
 
 // Create a variables
 int data = 0;
