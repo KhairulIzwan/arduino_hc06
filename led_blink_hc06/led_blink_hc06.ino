@@ -27,10 +27,12 @@ void loop() {
   }
   // Importtant: the '' and "" are different meaning
   if (data == '1'){
+    // Any action put here!
     digitalWrite(LED, HIGH);
   }
   else if (data == '2')
   {
+    // Any action put here!
     digitalWrite(LED, LOW);
   }
 
