@@ -7,7 +7,7 @@
 SoftwareSerial mySerial(3, 4); // RX, TX
 
 // #define constantName value
-#define LED 13;
+#define LED 13
 
 // Create a variables
 int data = 0;
@@ -27,10 +27,12 @@ void loop() {
   }
   // Importtant: the '' and "" are different meaning
   if (data == '1'){
+    // Any action put here!
     digitalWrite(LED, HIGH);
   }
   else if (data == '2')
   {
+    // Any action put here!
     digitalWrite(LED, LOW);
   }
 
