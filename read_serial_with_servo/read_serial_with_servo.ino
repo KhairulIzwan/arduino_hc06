@@ -28,72 +28,35 @@ void setup() {
 
 void loop() 
 {
-  if (mySerial.available() >= 3)
+  if (mySerial.available() >= 5)
   {
-    for (int i=0; i<3; i++)
+    for (int i=0; i<5; i++)
     {
       buffer[i] = mySerial.read();
     }
   }
-  
-//  //  C -- Open
-//  if (strcmp(buffer[0], 'C') == 0)
-//  {
-//    if (atoi(buffer[1]) == 1)
-//    {
-//      digitalWrite(LED, LOW); 
-//    }
-//    else
-//    {
-//      digitalWrite(LED, HIGH);
-//    }
-//  }
-//  //  D -- Close
-//  else if (strcmp(buffer[0], 'D') == 0)
-//  {
-//    if (atoi(buffer[1]) == 1)
-//    {
-//      digitalWrite(LED, LOW); 
-//    }
-//    else
-//    {
-//      digitalWrite(LED, HIGH);
-//    }
-//  }
 
-  if (strcmp(buffer[0], 'C') == 0)
+  if (strcmp(buffer[0], '1') == 0)
   {
-    if (strcmp(buffer[1], '1') == 0)
+    if (strcmp(buffer[1], '2') == 0)
     {
-      if (strcmp(buffer[2], '2') == 0)
+      if (strcmp(buffer[2], '3') == 0)
       {
-        digitalWrite(LED, HIGH);
-        myservo.write(180);  
+        if (strcmp(buffer[3], '4') == 0)
+        {
+          if (strcmp(buffer[4], 'C') == 0)
+          {
+            digitalWrite(LED, HIGH);
+            myservo.write(180);
+          }
+          else if (strcmp(buffer[4], 'D') == 0)
+          {
+            digitalWrite(LED, HIGH);
+            myservo.write(0);
+          }
+        }
       }
     }
-//    else
-//    {
-//      digitalWrite(LED, LOW);  
-//    }
-  }
-  else if (strcmp(buffer[0], 'D') == 0)
-  {
-    if (strcmp(buffer[1], '1') == 0)
-    {
-      if (strcmp(buffer[2], '2') == 0)
-      {
-        digitalWrite(LED, LOW);
-        myservo.write(0);
-      }
-    }
-//    else
-//    {
-//      digitalWrite(LED, HIGH);
-//    }
-  }
-  else
-  {
-    digitalWrite(LED, LOW);
   }
   Serial.println(buffer);
 }
