@@ -18,7 +18,7 @@ void setup() {
   pinMode(LED, OUTPUT);
 }
 
-void loop() 
+void loop()
 {
   if (mySerial.available() >= 2)
   {
@@ -27,48 +27,23 @@ void loop()
       buffer[i] = mySerial.read();
     }
   }
-  
-//  //  C -- Open
-//  if (strcmp(buffer[0], 'C') == 0)
-//  {
-//    if (atoi(buffer[1]) == 1)
-//    {
-//      digitalWrite(LED, LOW); 
-//    }
-//    else
-//    {
-//      digitalWrite(LED, HIGH);
-//    }
-//  }
-//  //  D -- Close
-//  else if (strcmp(buffer[0], 'D') == 0)
-//  {
-//    if (atoi(buffer[1]) == 1)
-//    {
-//      digitalWrite(LED, LOW); 
-//    }
-//    else
-//    {
-//      digitalWrite(LED, HIGH);
-//    }
-//  }
 
   if (strcmp(buffer[0], 'C') == 0)
   {
     if (strcmp(buffer[1], 'C') == 0)
     {
-      digitalWrite(LED, HIGH);  
+      digitalWrite(LED, HIGH);
     }
     else
     {
-      digitalWrite(LED, LOW);  
+      digitalWrite(LED, LOW);
     }
   }
   else if (strcmp(buffer[0], 'D') == 0)
   {
     if (strcmp(buffer[1], 'D') == 0)
     {
-      digitalWrite(LED, LOW);  
+      digitalWrite(LED, LOW);
     }
     else
     {
@@ -81,12 +56,3 @@ void loop()
   }
   Serial.println(buffer);
 }
-
-//if (atoi(buffer[1]) == 1)
-//{
-//  digitalWrite(LED, HIGH);
-//}
-//else if (atoi(buffer[1]) != 1)
-//{
-//  digitalWrite(LED, LOW);
-//}

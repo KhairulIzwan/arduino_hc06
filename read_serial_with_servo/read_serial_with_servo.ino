@@ -26,7 +26,7 @@ void setup() {
   myservo.attach(9);
 }
 
-void loop() 
+void loop()
 {
   if (mySerial.available() >= 5)
   {

@@ -1,9 +1,7 @@
-// Basic use of Bluetooth Serial Transceiver HC06
-
-// Require SoftwareSerial library to convert ordinary digital pins as serial pins (TX, RX)
+/*
+ * SoftwareSerail -- Create another UART/Serial communincation
+ */
 #include <SoftwareSerial.h>
-
-// Namespace -- give a specific name for our new serial port
 SoftwareSerial mySerial(3, 4); // RX, TX
 
 // #define constantName value
@@ -25,14 +23,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   if (mySerial.available())
   {
-//    while (true)
-//    {
       data = mySerial.read();
-//      if (data == '\n')
-//      {
-//        break;
-//      }
-//    }
   }
   // Importtant: the '' and "" are different meaning
   if (data == '1'){
