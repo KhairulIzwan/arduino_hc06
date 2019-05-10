@@ -26,11 +26,11 @@ void loop() {
     data = mySerial.read();
   }
   // Importtant: the '' and "" are different meaning
-  if (data == '1'){
+  if (data == 'C'){
     // Any action put here!
     digitalWrite(LED, HIGH);
   }
-  else if (data == '2')
+  else if (data == 'D')
   {
     // Any action put here!
     digitalWrite(LED, LOW);

@@ -16,9 +16,9 @@ void setup() {
 
 void loop() 
 {
-  if (mySerial.available() >= 8)
+  if (mySerial.available() >= 1)
   {
-    for (int i=0; i<8; i++)
+    for (int i=0; i<1; i++)
     {
       buffer[i] = mySerial.read();
     }
