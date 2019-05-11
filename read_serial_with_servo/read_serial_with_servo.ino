@@ -1,11 +1,11 @@
 /*
- * SoftwareSerail -- Create another UART/Serial communincation
+ * SoftwareSerial -- Create another UART/Serial communincation
  */
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(3, 4); // RX, TX
 
 /*
- *
+ * Servo library
  */
 #include <Servo.h>
 Servo myservo;
