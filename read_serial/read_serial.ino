@@ -5,7 +5,6 @@
 SoftwareSerial mySerial(3, 4); // RX, TX
 
 // Create a variables
-int data = 0;
 char buffer[8];
 
 void setup() {
@@ -14,11 +13,11 @@ void setup() {
   Serial.begin(9600);
 }
 
-void loop() 
+void loop()
 {
-  if (mySerial.available() >= 1)
+  if (mySerial.available() >= 5)
   {
-    for (int i=0; i<1; i++)
+    for (int i=0; i<5; i++)
     {
       buffer[i] = mySerial.read();
     }

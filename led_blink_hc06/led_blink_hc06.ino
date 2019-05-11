@@ -6,33 +6,28 @@ SoftwareSerial mySerial(3, 4); // RX, TX
 
 #define LED 13
 
-// Create a variables
-int data = 0;
-
-void setup() {
-  // put your setup code here, to run once:
+void setup()
+{
   mySerial.begin(9600);
-
   pinMode(LED, OUTPUT);
-
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  if (mySerial.available())
+void loop()
+{
+  if (mySerial.available() >= 1)
   {
-    data = mySerial.read();
+    for (int i=0; i<1; i++)
+    {
+      char buffer[i] = mySerial.read();
+    }
   }
 
-  // Importtant: the '' and "" are different meaning
-  if (data == 'C')
+  if (strcmp(buffer[0], 'C') == 0)
   {
-    // Any action put here!
     digitalWrite(LED, HIGH);
   }
-  else if (data == 'D')
+  else if (strcmp(buffer[0], 'D') == 0)
   {
-    // Any action put here!
     digitalWrite(LED, LOW);
   }
 

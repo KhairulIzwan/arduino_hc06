@@ -1,5 +1,6 @@
 # arduino_hc06
 Basic use of Arduino UNO with HC-06 Bluetooth module.
+- using **SoftwareSerial** library instead of hardware serial exist on arduino board.
 
 ## Arduino UNO PinOut
 ![Alt text](https://github.com/KhairulIzwan/arduino_hc06/blob/master/img/Introduction-to-Arduino-UNO.png)

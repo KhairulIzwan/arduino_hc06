@@ -5,19 +5,15 @@
 SoftwareSerial mySerial(3, 4); // RX, TX
 
 /*
- * 
+ *
  */
 #include <Servo.h>
 Servo myservo;
 
 #define LED 13
 
-// Create a variables
-int data = 0;
-char buffer[8];
-
-void setup() {
-  // put your setup code here, to run once:
+void setup()
+{
   mySerial.begin(9600);
   Serial.begin(9600);
 
@@ -60,12 +56,3 @@ void loop()
   }
   Serial.println(buffer);
 }
-
-//if (atoi(buffer[1]) == 1)
-//{
-//  digitalWrite(LED, HIGH);
-//}
-//else if (atoi(buffer[1]) != 1)
-//{
-//  digitalWrite(LED, LOW);
-//}

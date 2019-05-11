@@ -6,12 +6,8 @@ SoftwareSerial mySerial(3, 4); // RX, TX
 
 #define LED 13
 
-// Create a variables
-int data = 0;
-char buffer[8];
-
-void setup() {
-  // put your setup code here, to run once:
+void setup()
+{
   mySerial.begin(9600);
   Serial.begin(9600);
 
@@ -24,7 +20,7 @@ void loop()
   {
     for (int i=0; i<2; i++)
     {
-      buffer[i] = mySerial.read();
+      char buffer[i] = mySerial.read();
     }
   }
 
@@ -49,10 +45,6 @@ void loop()
     {
       digitalWrite(LED, HIGH);
     }
-  }
-  else
-  {
-    digitalWrite(LED, LOW);
   }
   Serial.println(buffer);
 }
